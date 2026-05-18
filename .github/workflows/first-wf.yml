@@ -13,11 +13,11 @@ jobs:
       - name: installing dependencies
         run: npm ci
       - name: executing lint
-        run: npm lint
+        run: npm run lint
       - name: executing build
-        run: npm build
+        run: npm run build
       - name: execute test
-        run: npm test
+        run: npm run test
       - name: final-steps
         run: echo "all-steps are done!"
 
