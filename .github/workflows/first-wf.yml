@@ -1,0 +1,19 @@
+name: first-wf
+on: push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v3
+      - name: installing node
+        uses: actions/node-setup@v3
+      - name: executing lint
+        run: npm lint
+      - name: executing build
+        run: npm build
+      - name: execute test
+        run: npm test
+      - name: final-steps
+        run: echo "all-steps are done!"
+
